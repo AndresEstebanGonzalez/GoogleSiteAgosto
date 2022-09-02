@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+@import "../css/variables/color";
+@import "../css/variables/mixin";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 100vw;
+  background-color: $grey;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 1rem;
+      a {
+        color: $white;
+        text-decoration: none;
+        &:active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .nav-right {
+    padding-right: 2rem;
+  }
+}
+.middle {
+  @include flexCenter;
+  height: 80vh;
+  width: 100vw;
+  background-color: $white;
+  .center {
+    @include flexCenter;
+    flex-direction: column;
+    height: 75vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    .center-top {
+      @include flexCenter;
+      .googleLogo {
+        width: 30vw;
+      }
+    }
+    .center-bottom {
+      @include flexCenter;
+      flex-direction: column;
+      width: 100vw;
+      .searchbar-bar {
+        width: 40vw;
+      }
+      .searchbuttons {
+        @include flexCenter;
+        width: 100vw;
+        margin: 1rem 0 0;
+        word-wrap: break-word;
+        .btn-gs {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  @include flexCenter;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 10vh;
+  width: 100vw;
+  .ft-top {
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin: 0 1rem;
+        a {
+          font-weight: bold;
+          text-decoration: none;
+          color: $google-blue;
+        }
+      }
+    }
+  }
+}
